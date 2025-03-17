@@ -152,7 +152,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Credits 👏
 
-Developed by The Minions Team
+Developed by The Minions Team(sajad,harikrishnan,adwait & jishnnu)
 
 ## Support 💬
 
