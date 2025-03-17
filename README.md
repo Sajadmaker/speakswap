@@ -1,56 +1,171 @@
+# SpeakSwap 🎙️
+
+A modern, real-time voice translation application that converts speech from one language to another while preserving the speaker's tone and emotion.
+
 <div align="center">
-<h1> LinguaSync: Real-Time Voice Translator </h1> <a href="#"><img alt="language" src="https://user-images.githubusercontent.com/132539454/278971782-9453805e-e2e6-4d99-b1de-cf8fcd3e7105.svg"></a>
+<h1> SpeakSwap: Real-Time Voice Translator </h1>
+<a href="#"><img alt="language" src="https://user-images.githubusercontent.com/132539454/278971782-9453805e-e2e6-4d99-b1de-cf8fcd3e7105.svg"></a>
 </div>
 
-Real-Time Voice Translator is a machine learning project that aims to provide a seamless and natural experience of cross-lingual communication. It uses deep neural networks to translate voice from one language to another in real time while preserving the tone and emotion of the speaker. It is a desktop application that supports Windows, Linux, and Mac operating systems.
+## Features ✨
 
-The application is easy to use: simply select the languages you want to translate between and start speaking. The application will listen to your voice and provide instant translations in real-time. You can also use the application to translate conversations between two or more people.
+- Real-time voice translation
+- Support for multiple languages
+- Modern, intuitive interface
+- High-quality voice synthesis
+- Advanced audio processing
+- Whisper-based speech recognition
+- Customizable voice settings
+- Keyboard shortcuts
+- Progress indicators
+- Auto-scrolling text
+- Error handling and feedback
+
+## Supported Languages 🌍
+
+- English
+- Hindi
+- Bengali
+- Spanish
+- Chinese (Simplified)
+- Russian
+- Japanese
+- Korean
+- German
+- French
+- Tamil
+- Telugu
+- Kannada
+- Gujarati
+- Punjabi
+- Malayalam
+
+## Prerequisites 📋
+
+- Python 3.8 or higher
+- Windows 10/11
+- Microphone
+- Speakers/Headphones
+- Internet connection
+
+## Installation 🚀
+
+1. Clone the repository:
+```bash
+git clone https://github.com/sajadmaker/speakswap.git
+cd speakswap
+```
+
+2. Create a virtual environment (recommended):
+```bash
+# Create virtualenv
+python -m venv env
+
+# Windows
+env\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
+pip install --upgrade wheel
+pip install -r requirements.txt
+```
+
+## Usage 💡
+
+1. Run the application:
+```bash
+python main.py
+```
+
+2. Select input and output languages from the dropdown menus
+3. Click "Start Translation" or press Ctrl+S to begin
+4. Speak into your microphone
+5. The application will:
+   - Convert your speech to text
+   - Translate the text
+   - Read the translation aloud
+6. Click "Stop" or press Ctrl+X to end the session
+
+### Keyboard Shortcuts ⌨️
+
+- `Ctrl+S`: Start translation
+- `Ctrl+X`: Stop translation
+- `Ctrl+A`: Open about page
+- `Ctrl+L`: Clear text
+- `Ctrl+,`: Open settings
+
+## Building Executable 🏗️
+
+I am using [cx_Freeze](https://github.com/marcelotduarte/cx_Freeze/tree/main) to build executable file of this app. The build settings can be changed by modifying the [setup.py](setup.py) file.
+
+### Build installer containing all the files:
+```bash
+# Windows
+python setup.py bdist_msi
+
+# Linux
+python setup.py bdist_rpm
+
+# Mac
+python setup.py bdist_mac
+```
+
+The executable will be created in the `build` directory.
+
+## Voice Settings ⚙️
+
+Access voice settings by clicking the settings button (⚙️) or pressing Ctrl+,
+
+- Speech Rate: Adjust the speed of voice output
+- Volume: Control the output volume
+- Pitch: Modify the voice pitch
+- Voice Selection: Choose from available system voices
+- Advanced Settings:
+  - Use Whisper for better recognition
+  - Enhance audio quality
+  - Auto-scroll text
 
 
-### Dependencies
-    <=Python3.11, gTTS, pyaudio, playsound==1.2.2, deep-translator, SpeechRecognition, google-transliteration-api, cx-Freeze
+## Troubleshooting 🔧
 
+1. **Microphone not working:**
+   - Check system microphone settings
+   - Ensure microphone is selected in the application
+   - Test microphone in system settings
 
-### Getting started
+2. **No sound output:**
+   - Verify system audio settings
+   - Check if speakers/headphones are connected
+   - Test system audio
 
-1. Clone this project and create virtualenv (recommended) and activate virtualenv.
-    ```
-    # Create virtualenv
-    python -m venv env
- 
-    # Linux/MacOS
-    source env/bin/activate
-    
-    # Windows
-    env\Scripts\activate
-    ```
-    
-2. Install require dependencies.
-    ```
-    pip install --upgrade wheel
-    
-    pip install -r requirements.txt
-    ```
+3. **Translation issues:**
+   - Check internet connection
+   - Verify language selection
+   - Ensure clear speech input
 
-3. Run code and speech (have fun).
-    ```
-    python main.py
-    ```
+## Contributing 🤝
 
-### Program Flow:
-<a href="#"><img src="https://github.com/SamirPaulb/real-time-voice-translator/assets/77569653/73dd62d6-798d-4129-aff3-16d6d932a817" alt="Block Diagram of Voice Translator"></a>
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
+## License 📄
 
-### Install Windows/Linux/Mac Application <a href="https://github.com/SamirPaulb/real-time-voice-translator/releases/latest"><img src="https://user-images.githubusercontent.com/132539454/278971282-8d676023-a03a-463c-8e55-3f0afe6e3e58.svg" alt="DOWNLOAD"></a>
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-I am using <a href="https://github.com/marcelotduarte/cx_Freeze/tree/main">cx_Freeze</a> to build executable file of this app. The build settings can be changed by modifying the <a href="https://github.com/SamirPaulb/real-time-voice-translator/blob/main/setup.py">setup.py</a> file.
+## Credits 👏
 
-##### Build installer containing all the files:
-- Windows: ```python setup.py bdist_msi```
-- Linux: ```python setup.py bdist_rpm```
-- Mac: ```python setup.py bdist_mac```
+Developed by The Minions Team
 
+## Support 💬
 
-### GUI 
-<a href="#"><img src="https://github.com/SamirPaulb/real-time-voice-translator/assets/77569653/f96a4115-a88f-4096-9a00-954b8527d872" alt="App GUI"></a>
+For support, please open an issue in the GitHub repository or contact the development team.
 
+---
+
+<div align="center">
+Made with ❤️ by <a href="https://github.com/sajadmaker">Sajad Maker</a>
+</div>
