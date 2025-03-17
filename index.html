@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SpeakSwap - Voice Translation Made Simple">
+    <title>SpeakSwap | Voice Translation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --dark: #1e293b;
+            --light-gray: #f1f5f9;
+            --gray: #64748b;
+            --white: #ffffff;
+            --spacing: 4rem;
+            --spacing-sm: 2rem;
+            --spacing-xs: 1rem;
+            --border-radius: 6px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-xs);
+        }
+
+        /* Header */
+        .header {
+            padding: var(--spacing-xs) 0;
+            border-bottom: 1px solid var(--light-gray);
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero */
+        .hero {
+            padding: var(--spacing) 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto var(--spacing-sm);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: var(--border-radius);
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--primary-light);
+        }
+
+        /* Features */
+        .features {
+            padding: var(--spacing) 0;
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-xs);
+        }
+
+        .feature {
+            padding: var(--spacing-xs);
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Team */
+        .team {
+            padding: var(--spacing) 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xs);
+        }
+
+        .team-member {
+            text-align: center;
+            padding: var(--spacing-xs);
+        }
+
+        .member-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .member-role {
+            color: var(--primary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-bio {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Footer */
+        .footer {
+            padding: var(--spacing-sm) 0;
+            border-top: 1px solid var(--light-gray);
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .features-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">SpeakSwap</a>
+                <nav class="nav">
+                    <a href="#features">Features</a>
+                    <a href="#team">Team</a>
+                    <a href="https://github.com/sajadmaker/speakswap" target="_blank">GitHub</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Voice Translation Made Simple</h1>
+            <p class="hero-subtitle">Transform your voice into any language instantly with our cutting-edge technology. Fast, accurate, and easy to use.</p>
+            <a href="https://github.com/sajadmaker/speakswap" class="btn" target="_blank">View on GitHub</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Features</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3 class="feature-title">Real-time Translation</h3>
+                    <p class="feature-description">Instant voice translation with high accuracy and natural flow.</p>
+                </div>
+                <div class="feature">
+                    <h3 class="feature-title">Multiple Languages</h3>
+                    <p class="feature-description">Support for 16+ languages with more being added regularly.</p>
+                </div>
+                <div class="feature">
+                    <h3 class="feature-title">Advanced Processing</h3>
+                    <p class="feature-description">Whisper-based recognition and high-quality voice synthesis.</p>
+                </div>
+                <div class="feature">
+                    <h3 class="feature-title">Customizable</h3>
+                    <p class="feature-description">Adjust voice settings, speed, pitch, and more to your preference.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3 class="member-name">Abdulla Sajad</h3>
+                    <p class="member-role">Lead Developer</p>
+                    <p class="member-bio">Main architect and primary developer of SpeakSwap.</p>
+                </div>
+                <div class="team-member">
+                    <h3 class="member-name">Harikrishnan K</h3>
+                    <p class="member-role">Secondary Developer</p>
+                    <p class="member-bio">Contributed to UI components and voice processing.</p>
+                </div>
+                <div class="team-member">
+                    <h3 class="member-name">Adwait PC</h3>
+                    <p class="member-role">Documentation Lead</p>
+                    <p class="member-bio">Created comprehensive documentation and guides.</p>
+                </div>
+                <div class="team-member">
+                    <h3 class="member-name">Jishnu MR</h3>
+                    <p class="member-role">Technical Writer</p>
+                    <p class="member-bio">Authored blog posts and technical articles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SpeakSwap. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
