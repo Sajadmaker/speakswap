@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SpeakSwap</string>
+    <string name="select_language">Select Language</string>
+    <string name="from_language">From</string>
+    <string name="to_language">To</string>
+    <string name="enter_text">Enter text</string>
+    <string name="type_or_speak">Type or speak...</string>
+    <string name="translation">Translation</string>
+    <string name="speak">Speak</string>
+    <string name="stop">Stop</string>
+    <string name="listen">Listen</string>
+    <string name="error_permission_denied">Microphone permission is required for speech recognition</string>
+    <string name="error_translation_failed">Translation failed. Please try again.</string>
+    <string name="error_tts_not_initialized">Text-to-speech not initialized</string>
+    <string name="error_language_not_supported">Language not supported</string>
+</resources> 
