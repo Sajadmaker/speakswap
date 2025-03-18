@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.speakswap'
+    namespace 'com.minions.speakswap'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.speakswap"
+        applicationId "com.minions.speakswap"
         minSdk 24
         targetSdk 34
         versionCode 1

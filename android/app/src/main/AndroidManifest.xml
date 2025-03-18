@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.speakswap">
+    package="com.minions.speakswap">
 
     <!-- Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- Features -->
+    <uses-feature android:name="android.hardware.microphone" android:required="true" />
 
     <application
         android:name=".SpeakSwapApplication"
@@ -14,19 +18,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SpeakSwap">
+        android:theme="@style/Theme.SpeakSwap"
+        android:usesCleartextTraffic="true">
         
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.SpeakSwap">
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.SpeakSwap"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Service for TextToSpeech -->
+        <service android:name="android.speech.tts.TextToSpeechService" />
     </application>
 
 </manifest> 

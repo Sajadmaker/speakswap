@@ -14,4 +14,14 @@
     <string name="error_translation_failed">Translation failed. Please try again.</string>
     <string name="error_tts_not_initialized">Text-to-speech not initialized</string>
     <string name="error_language_not_supported">Language not supported</string>
+    
+    <!-- History Screen -->
+    <string name="history_title">Translation History</string>
+    <string name="clear_history">Clear</string>
+    <string name="no_history">No translation history yet</string>
+    <string name="translation_direction">%1$s → %2$s</string>
+    
+    <!-- Navigation -->
+    <string name="nav_translate">Translate</string>
+    <string name="nav_history">History</string>
 </resources> 
