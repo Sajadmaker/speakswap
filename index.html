@@ -79,6 +79,21 @@
             color: var(--primary);
         }
 
+        .download-btn {
+            background: #10b981;
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .download-btn:hover {
+            background: #059669;
+        }
+
         /* Hero */
         .hero {
             padding: var(--spacing) 0;
@@ -97,6 +112,13 @@
             color: var(--gray);
             max-width: 600px;
             margin: 0 auto var(--spacing-sm);
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
         }
 
         .btn {
@@ -208,6 +230,10 @@
             .team-grid {
                 grid-template-columns: 1fr;
             }
+
+            .hero-actions {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -221,6 +247,7 @@
                     <a href="#features">Features</a>
                     <a href="#team">Team</a>
                     <a href="https://github.com/sajadmaker/speakswap" target="_blank">GitHub</a>
+                    <a href="https://www.mediafire.com/file/your-apk-link" class="download-btn" target="_blank">Download APK</a>
                 </nav>
             </div>
         </div>
@@ -231,7 +258,10 @@
         <div class="container">
             <h1 class="hero-title">Voice Translation Made Simple</h1>
             <p class="hero-subtitle">Transform your voice into any language instantly with our cutting-edge technology. Fast, accurate, and easy to use.</p>
-            <a href="https://github.com/sajadmaker/speakswap" class="btn" target="_blank">View on GitHub</a>
+            <div class="hero-actions">
+                <a href="https://github.com/sajadmaker/speakswap" class="btn" target="_blank">View on GitHub</a>
+                <a href="https://www.mediafire.com/file/your-apk-link" class="download-btn" target="_blank">Download APK</a>
+            </div>
         </div>
     </section>
 
